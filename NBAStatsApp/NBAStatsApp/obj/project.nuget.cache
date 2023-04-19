@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "aB26ePFE+kzQqZeXJU14HdndxHKHf/cKiuu2nMS/TgtdQiJC/9WzyJQUjfFvzO7pb7UKk4yzszUyNojG7HZn5Q==",
+  "dgSpecHash": "jmqgaej9qh46OMSmkK1Kl4+zXi9uQT3hWti90AsiDxlcCy2u1C9qBchwmpGkOJ379O3cYEgp1PalMGetdxFPgA==",
   "success": true,
   "projectFilePath": "C:\\Users\\phili\\Documents\\Code\\MyProjects\\NBAStatisticsApplication\\NBAStatsApp\\NBAStatsApp\\NBAStatsApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\phili\\.nuget\\packages\\htmlagilitypack\\1.11.46\\htmlagilitypack.1.11.46.nupkg.sha512",
+    "C:\\Users\\phili\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

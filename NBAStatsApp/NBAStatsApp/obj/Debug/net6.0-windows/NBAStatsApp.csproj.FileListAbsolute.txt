@@ -19,3 +19,6 @@ C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NB
 C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\obj\Debug\net6.0-windows\ref\NBAStatsApp.dll
 C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\obj\Debug\net6.0-windows\View\MainWindow.g.cs
 C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\obj\Debug\net6.0-windows\View\MainWindow.baml
+C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\bin\Debug\net6.0-windows\HtmlAgilityPack.dll
+C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\obj\Debug\net6.0-windows\NBAStatsApp.csproj.CopyComplete
+C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\bin\Debug\net6.0-windows\Newtonsoft.Json.dll

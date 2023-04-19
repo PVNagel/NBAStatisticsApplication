@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NBAStatsApp.Model.Repository;
+using NBAStatsApp.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,12 @@ namespace NBAStatsApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainViewModel mvm = new MainViewModel();
+
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = mvm;
         }
     }
 }
