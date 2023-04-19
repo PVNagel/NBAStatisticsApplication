@@ -56,7 +56,7 @@
 
 
     </Window.Resources>
-    
+
     <Grid Background="White">
         <Border VerticalAlignment="Center"
                 HorizontalAlignment="Center">

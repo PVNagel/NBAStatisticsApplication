@@ -4,11 +4,9 @@ C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NB
 C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\bin\Debug\net6.0-windows\NBAStatsApp.dll
 C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\bin\Debug\net6.0-windows\NBAStatsApp.pdb
 C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\obj\Debug\net6.0-windows\NBAStatsApp.csproj.AssemblyReference.cache
-C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\obj\Debug\net6.0-windows\NBAStatsApp_MarkupCompile.cache
 C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\obj\Debug\net6.0-windows\NBAStatsApp_MarkupCompile.lref
-C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\obj\Debug\net6.0-windows\MainWindow.baml
 C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\obj\Debug\net6.0-windows\NBAStatsApp.g.resources
 C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\obj\Debug\net6.0-windows\NBAStatsApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\obj\Debug\net6.0-windows\NBAStatsApp.AssemblyInfoInputs.cache
@@ -19,3 +17,5 @@ C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NB
 C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\obj\Debug\net6.0-windows\NBAStatsApp.pdb
 C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\obj\Debug\net6.0-windows\NBAStatsApp.genruntimeconfig.cache
 C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\obj\Debug\net6.0-windows\ref\NBAStatsApp.dll
+C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\obj\Debug\net6.0-windows\View\MainWindow.g.cs
+C:\Users\phili\Documents\Code\MyProjects\NBAStatisticsApplication\NBAStatsApp\NBAStatsApp\obj\Debug\net6.0-windows\View\MainWindow.baml
