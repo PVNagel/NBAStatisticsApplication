@@ -8,6 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Headshots\headshot-placeholder.png" />
+    <None Remove="Images\Teams\SeirinLogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Headshots\headshot-placeholder.png" />
+    <Resource Include="Images\Teams\SeirinLogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="HtmlAgilityPack" Version="1.11.46" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>

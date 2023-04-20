@@ -18,13 +18,12 @@ namespace NBAStatsApp.ViewModel
         private PlayerViewModel playerViewModel;
         public MainViewModel()
         {
-            playerRepo.API();
+            playerRepo.PlayerAPI();
             foreach (Player player in playerRepo.GetAll())
             {
                 PlayerViewModel playerVM = new(player);
                 PlayersVM.Add(playerVM);
             }
         }
-
     }
 }

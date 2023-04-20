@@ -1,4 +1,4 @@
-﻿using NBAStatsApp.API;
+﻿using NBAStatsApp.API.API;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -15,13 +15,6 @@ namespace NBAStatsApp.Model.Repository
 
         public TeamRepo()
         {
-            using (HttpClient client = new HttpClient())
-            {
-                Uri endpoint = new Uri("https://www.balldontlie.io/api/v1/teams");
-                var result = client.GetAsync(endpoint).Result;
-                var json = result.Content.ReadAsStringAsync().Result;
-
-            }
         }
     }
 }

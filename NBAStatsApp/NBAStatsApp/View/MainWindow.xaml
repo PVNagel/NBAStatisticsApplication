@@ -52,6 +52,11 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <!-- ListBoxItem Style -->
+        <Style TargetType="ListBoxItem">
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
         <!-- End: Styles -->
     </Window.Resources>
 
@@ -85,26 +90,45 @@
                          Margin="-2,0,0,0" 
                          VerticalAlignment="Center">
                     <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="491*"/>
-                            <ColumnDefinition Width="467*"/>
-                        </Grid.ColumnDefinitions>
-                        <ListBox x:Name="playerListBox" ItemsSource="{Binding PlayersVM}" Margin="50,50,250,50">
-                            <ListBox.ItemTemplate>
-                                <DataTemplate>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock>
-                                            <TextBlock.Text>
-                                                <MultiBinding StringFormat="{}{0} {1}">
-                                                    <Binding Path="first_name"/>
-                                                    <Binding Path="last_name"/>
-                                                </MultiBinding>
-                                            </TextBlock.Text>
-                                        </TextBlock>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </ListBox.ItemTemplate>
-                        </ListBox>
+                        <Label x:Name="playerTextLabel" HorizontalAlignment="Left" Margin="40,40,0,900" Content="Players Overview" FontWeight="Bold" FontSize="48" Foreground="White"/>
+                        <Grid x:Name="listBoxGrid" Margin="40,125,1475,40">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <ListBox x:Name="playerListBox" ItemsSource="{Binding PlayersVM}" Height="850" BorderThickness="10" BorderBrush="Gray" d:ItemsSource="{d:SampleData ItemCount=5}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <TextBlock>
+                                                <TextBlock.Text>
+                                                    <MultiBinding StringFormat="{}{0} {1}">
+                                                        <Binding Path="first_name"/>
+                                                        <Binding Path="last_name"/>
+                                                    </MultiBinding>
+                                                </TextBlock.Text>
+                                            </TextBlock>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </Grid>
+                        <Rectangle x:Name="playerMenuBorder" HorizontalAlignment="Left" Height="855" Margin="484,125,0,0" Stroke="Black" VerticalAlignment="Top" Width="1390" Fill="Gray"/>
+                        <Grid x:Name="selectedPlayerInfoGrid" Margin="508,146,66,60" Background="White">
+                            <Label x:Name="positionLabel" Content="POSITION:" HorizontalAlignment="Left" Margin="50,433,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="36"/>
+                            <Label x:Name="firstNameLabel" Content="FirstName" HorizontalAlignment="Left" Margin="325,134,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Normal" FontSize="72"/>
+                            <Label x:Name="lastNameLabel" Content="LastName" HorizontalAlignment="Left" Margin="325,217,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="72"/>
+                            <Label x:Name="playerTeamLabel" Content="TeamName" HorizontalAlignment="Left" Margin="265,375,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Normal" FontSize="36"/>
+                            <Label x:Name="playerPositionLabel" Content="G" HorizontalAlignment="Left" Margin="265,433,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Normal" FontSize="36"/>
+                            <Image x:Name="playerHeadshot" Source="/Images/Headshots/headshot-placeholder.png" HorizontalAlignment="Left" Height="250" Margin="50,50,0,0" VerticalAlignment="Top" Width="250"/>
+                            <Label x:Name="teamLabel" Content="TEAM:" HorizontalAlignment="Left" Margin="50,375,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+                            <Image x:Name="teamLogo" Source="/Images/Teams/SeirinLogo.png" HorizontalAlignment="Left" Height="250" Margin="1050,50,0,0" VerticalAlignment="Top" Width="250"/>
+                            <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,350,0,0" Stroke="Black" VerticalAlignment="Top" Width="1322"/>
+                            <Label x:Name="weightLabel" Content="WEIGHT:" HorizontalAlignment="Left" Margin="50,563,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36"/>
+                            <Label x:Name="heightLabel" Content="HEIGHT:" HorizontalAlignment="Left" Margin="50,496,0,0" VerticalAlignment="Top" FontSize="36"/>
+                            <Label x:Name="playerheightLabel" Content="6'0" HorizontalAlignment="Left" Margin="265,496,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Normal"/>
+                            <Label x:Name="playerWeightLabel" Content="180 Pounds" HorizontalAlignment="Left" Margin="265,563,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Normal"/>
+                            <Label x:Name="playerNumberLabel" Content="#99" HorizontalAlignment="Left" Margin="325,28,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Normal" FontSize="72" RenderTransformOrigin="0.567,0.71"/>
+                        </Grid>
                     </Grid>
                 </TabItem>
                 <TabItem Header="TEAMS" 

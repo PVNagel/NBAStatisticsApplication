@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NBAStatsApp.Model;
 
-namespace NBAStatsApp.API
+namespace NBAStatsApp.API.API
 {
     public class Root
     {

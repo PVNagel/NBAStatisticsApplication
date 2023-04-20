@@ -4,3 +4,7 @@ My personal attempt at making a C# WPF application show casing stats from www.ba
 DISCLAIMER:
 This project was created in an attempt to learn and become better at WPF, APIs, WPF Data representation and more.
 Everything is for educational purposes only.
+
+
+Grayed out headshot image: https://sbgoalkeeping.co.uk/wp-content/uploads/2018/07/headshot-placeholder.png
+Seirin team logo image: https://www.pinterest.com/pin/seirin-high-basketball-club-logo-2-essential-tshirt-by-kagegfx--316448311297269123/
