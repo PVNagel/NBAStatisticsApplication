@@ -62,11 +62,10 @@
 
     <Grid Background="White">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1667*"/>
-            <ColumnDefinition Width="253*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Border VerticalAlignment="Center"
-                HorizontalAlignment="Left" Grid.ColumnSpan="2">
+                HorizontalAlignment="Center">
             <TabControl Width="1920" Height="1065" 
                         Style="{DynamicResource TabControlStyle}" 
                         Background="{DynamicResource PrimaryDarkColor}" 
@@ -99,7 +98,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <ListBox x:Name="playerListBox" ItemsSource="{Binding PlayersVM}" BorderThickness="15" BorderBrush="Gray" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,0">
+                            <ListBox x:Name="playerListBox" ItemsSource="{Binding PlayersVM}" SelectedItem="{Binding SelectedPlayerVM}"  BorderThickness="15" BorderBrush="Gray" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,0">
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
                                         <Grid>
@@ -119,19 +118,21 @@
                         <Rectangle x:Name="playerMenuBorder" HorizontalAlignment="Left" Height="840" Margin="484,125,0,0" Stroke="Black" VerticalAlignment="Top" Width="1390" Fill="Gray"/>
                         <Grid x:Name="selectedPlayerInfoGrid" Margin="508,146,66,60" Background="White">
                             <Label x:Name="positionLabel" Content="POSITION:" HorizontalAlignment="Left" Margin="50,433,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="36"/>
-                            <Label x:Name="firstNameLabel" Content="FirstName" HorizontalAlignment="Left" Margin="325,134,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Normal" FontSize="72"/>
-                            <Label x:Name="lastNameLabel" Content="LastName" HorizontalAlignment="Left" Margin="325,217,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="72"/>
+                            <Label x:Name="firstNameLabel" Content="{Binding SelectedPlayerVM.first_name, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="325,134,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Normal" FontSize="72"/>
+                            <Label x:Name="lastNameLabel" Content="{Binding SelectedPlayerVM.last_name, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="325,217,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="72"/>
                             <Label x:Name="playerTeamLabel" Content="TeamName" HorizontalAlignment="Left" Margin="265,375,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Normal" FontSize="36"/>
-                            <Label x:Name="playerPositionLabel" Content="G" HorizontalAlignment="Left" Margin="265,433,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Normal" FontSize="36"/>
+                            <Label x:Name="playerPositionLabel" Content="{Binding SelectedPlayerVM.position, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="265,433,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Normal" FontSize="36"/>
                             <Image x:Name="playerHeadshot" Source="/Images/Headshots/headshot-placeholder.png" HorizontalAlignment="Left" Height="250" Margin="50,50,0,0" VerticalAlignment="Top" Width="250"/>
                             <Label x:Name="teamLabel" Content="TEAM:" HorizontalAlignment="Left" Margin="50,375,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
                             <Image x:Name="teamLogo" Source="/Images/Teams/SeirinLogo.png" HorizontalAlignment="Left" Height="250" Margin="1050,50,0,0" VerticalAlignment="Top" Width="250"/>
                             <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,350,0,0" Stroke="Black" VerticalAlignment="Top" Width="1322"/>
                             <Label x:Name="weightLabel" Content="WEIGHT:" HorizontalAlignment="Left" Margin="50,563,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36"/>
                             <Label x:Name="heightLabel" Content="HEIGHT:" HorizontalAlignment="Left" Margin="50,496,0,0" VerticalAlignment="Top" FontSize="36"/>
-                            <Label x:Name="playerheightLabel" Content="6'0" HorizontalAlignment="Left" Margin="265,496,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Normal"/>
-                            <Label x:Name="playerWeightLabel" Content="180 Pounds" HorizontalAlignment="Left" Margin="265,563,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Normal"/>
-                            <Label x:Name="playerNumberLabel" Content="#99" HorizontalAlignment="Left" Margin="325,28,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Normal" FontSize="72" RenderTransformOrigin="0.567,0.71"/>
+                            <Label x:Name="playerheightFeetLabel" Content="{Binding SelectedPlayerVM.height_feet, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="265,496,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Normal"
+                                   ContentStringFormat=" {0}'"/>
+                            <Label x:Name="playerheightInchesLabel" Content="{Binding SelectedPlayerVM.height_inches, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="300,496,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Normal"/>
+                            <Label x:Name="playerWeightLabel" Content="{Binding SelectedPlayerVM.weight_pounds, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="265,563,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Normal"/>
+                            <Label Content="lbs" HorizontalAlignment="Left" Margin="330,563,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Normal"/>
                         </Grid>
                     </Grid>
                 </TabItem>
