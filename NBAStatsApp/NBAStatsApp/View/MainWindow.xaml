@@ -61,9 +61,13 @@
     </Window.Resources>
 
     <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1667*"/>
+            <ColumnDefinition Width="253*"/>
+        </Grid.ColumnDefinitions>
         <Border VerticalAlignment="Center"
-                HorizontalAlignment="Center">
-            <TabControl Width="1920" Height="1080" 
+                HorizontalAlignment="Left" Grid.ColumnSpan="2">
+            <TabControl Width="1920" Height="1065" 
                         Style="{DynamicResource TabControlStyle}" 
                         Background="{DynamicResource PrimaryDarkColor}" 
                         BorderThickness="0">
@@ -95,7 +99,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <ListBox x:Name="playerListBox" ItemsSource="{Binding PlayersVM}" Height="850" BorderThickness="10" BorderBrush="Gray" d:ItemsSource="{d:SampleData ItemCount=5}">
+                            <ListBox x:Name="playerListBox" ItemsSource="{Binding PlayersVM}" BorderThickness="15" BorderBrush="Gray" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,0">
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
                                         <Grid>
@@ -112,7 +116,7 @@
                                 </ListBox.ItemTemplate>
                             </ListBox>
                         </Grid>
-                        <Rectangle x:Name="playerMenuBorder" HorizontalAlignment="Left" Height="855" Margin="484,125,0,0" Stroke="Black" VerticalAlignment="Top" Width="1390" Fill="Gray"/>
+                        <Rectangle x:Name="playerMenuBorder" HorizontalAlignment="Left" Height="840" Margin="484,125,0,0" Stroke="Black" VerticalAlignment="Top" Width="1390" Fill="Gray"/>
                         <Grid x:Name="selectedPlayerInfoGrid" Margin="508,146,66,60" Background="White">
                             <Label x:Name="positionLabel" Content="POSITION:" HorizontalAlignment="Left" Margin="50,433,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="36"/>
                             <Label x:Name="firstNameLabel" Content="FirstName" HorizontalAlignment="Left" Margin="325,134,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Normal" FontSize="72"/>
