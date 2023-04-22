@@ -1,4 +1,4 @@
-﻿using NBAStatsApp.API.API;
+﻿using NBAStatsApp.API;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

@@ -8,3 +8,4 @@ Everything is for educational purposes only.
 
 Grayed out headshot image: https://sbgoalkeeping.co.uk/wp-content/uploads/2018/07/headshot-placeholder.png
 Seirin team logo image: https://www.pinterest.com/pin/seirin-high-basketball-club-logo-2-essential-tshirt-by-kagegfx--316448311297269123/
+NBA team logos: https://www.stickpng.com/cat/sports/basketball/nba-teams?page=1

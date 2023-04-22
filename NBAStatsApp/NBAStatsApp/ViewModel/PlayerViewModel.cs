@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,26 +11,28 @@ namespace NBAStatsApp.ViewModel
     public class PlayerViewModel
     {
         private Player player;
-        public int id { get; set; }
-        public string first_name { get; set; }
-        public int? height_feet { get; set; }
-        public int? height_inches { get; set; }
-        public string last_name { get; set; }
-        public string position { get; set; }
-        public Team team { get; set; }
-        public int? weight_pounds { get; set; }
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+
+        public int? HeightFeet{ get; set; }
+        public int? HeightInches { get; set; }
+        public string Position { get; set; }
+        public Team Team { get; set; }
+        public string TeamImagePath { get; set; }
+        public int? WeightPounds { get; set; }
 
         public PlayerViewModel(Player player)
         {
-            this.player = player;
-            this.id = player.id;
-            this.first_name = player.first_name;
-            this.height_feet = player.height_feet;
-            this.height_inches = player.height_inches;
-            this.last_name = player.last_name;
-            this.position = player.position;
-            this.team = player.team;
-            this.weight_pounds = player.weight_pounds;
+            Id = player.Id;
+            FirstName = player.FirstName;
+            LastName = player.LastName;
+            HeightFeet = player.HeightFeet;
+            HeightInches = player.HeightInches;
+            Position = player.Position;
+            Team = player.Team;
+            TeamImagePath = player.teamImagePath;
+            WeightPounds = player.WeightPounds;
         }
     }
 }

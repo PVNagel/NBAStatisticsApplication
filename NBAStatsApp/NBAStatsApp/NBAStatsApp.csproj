@@ -9,12 +9,72 @@
 
   <ItemGroup>
     <None Remove="Images\Headshots\headshot-placeholder.png" />
+    <None Remove="Images\Teams\76ers.png" />
+    <None Remove="Images\Teams\Bucks.png" />
+    <None Remove="Images\Teams\Bulls.png" />
+    <None Remove="Images\Teams\Cavaliers.png" />
+    <None Remove="Images\Teams\Celtics.png" />
+    <None Remove="Images\Teams\Clippers.png" />
+    <None Remove="Images\Teams\Grizzlies.png" />
+    <None Remove="Images\Teams\Hawks.png" />
+    <None Remove="Images\Teams\Heat.png" />
+    <None Remove="Images\Teams\Hornets.png" />
+    <None Remove="Images\Teams\Jazz.png" />
+    <None Remove="Images\Teams\Kings.png" />
+    <None Remove="Images\Teams\Knicks.png" />
+    <None Remove="Images\Teams\Lakers.png" />
+    <None Remove="Images\Teams\Magic.png" />
+    <None Remove="Images\Teams\Mavericks.png" />
+    <None Remove="Images\Teams\Nets.png" />
+    <None Remove="Images\Teams\Nuggets.png" />
+    <None Remove="Images\Teams\Pacers.png" />
+    <None Remove="Images\Teams\Pelicans.png" />
+    <None Remove="Images\Teams\Pistons.png" />
+    <None Remove="Images\Teams\Raptors.png" />
+    <None Remove="Images\Teams\Rockets.png" />
     <None Remove="Images\Teams\SeirinLogo.png" />
+    <None Remove="Images\Teams\Spurs.png" />
+    <None Remove="Images\Teams\Suns.png" />
+    <None Remove="Images\Teams\Thunder.png" />
+    <None Remove="Images\Teams\Timberwolves.png" />
+    <None Remove="Images\Teams\Trail Blazers.png" />
+    <None Remove="Images\Teams\Warriors.png" />
+    <None Remove="Images\Teams\Wizards.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\Headshots\headshot-placeholder.png" />
+    <Resource Include="Images\Teams\76ers.png" />
+    <Resource Include="Images\Teams\Rockets.png" />
+    <Resource Include="Images\Teams\Trail Blazers.png" />
+    <Resource Include="Images\Teams\Bucks.png" />
+    <Resource Include="Images\Teams\Bulls.png" />
+    <Resource Include="Images\Teams\Cavaliers.png" />
+    <Resource Include="Images\Teams\Celtics.png" />
+    <Resource Include="Images\Teams\Clippers.png" />
+    <Resource Include="Images\Teams\Grizzlies.png" />
+    <Resource Include="Images\Teams\Hawks.png" />
+    <Resource Include="Images\Teams\Heat.png" />
+    <Resource Include="Images\Teams\Hornets.png" />
+    <Resource Include="Images\Teams\Jazz.png" />
+    <Resource Include="Images\Teams\Kings.png" />
+    <Resource Include="Images\Teams\Knicks.png" />
+    <Resource Include="Images\Teams\Lakers.png" />
+    <Resource Include="Images\Teams\Magic.png" />
+    <Resource Include="Images\Teams\Mavericks.png" />
+    <Resource Include="Images\Teams\Nets.png" />
+    <Resource Include="Images\Teams\Nuggets.png" />
+    <Resource Include="Images\Teams\Pacers.png" />
+    <Resource Include="Images\Teams\Pelicans.png" />
+    <Resource Include="Images\Teams\Pistons.png" />
+    <Resource Include="Images\Teams\Raptors.png" />
     <Resource Include="Images\Teams\SeirinLogo.png" />
+    <Resource Include="Images\Teams\Spurs.png" />
+    <Resource Include="Images\Teams\Suns.png" />
+    <Resource Include="Images\Teams\Thunder.png" />
+    <Resource Include="Images\Teams\Timberwolves.png" />
+    <Resource Include="Images\Teams\Warriors.png" />
+    <Resource Include="Images\Teams\Wizards.png" />
   </ItemGroup>
 
   <ItemGroup>

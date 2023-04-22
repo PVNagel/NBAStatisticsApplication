@@ -1,11 +1,11 @@
-﻿using System;
+﻿using NBAStatsApp.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NBAStatsApp.Model;
 
-namespace NBAStatsApp.API.API
+namespace NBAStatsApp.API
 {
     public class Root
     {

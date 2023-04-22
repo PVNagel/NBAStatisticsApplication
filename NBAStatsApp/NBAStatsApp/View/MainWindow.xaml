@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:NBAStatsApp"
+        xmlns:local="clr-namespace:NBAStatsApp" xmlns:viewmodel="clr-namespace:NBAStatsApp.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
         mc:Ignorable="d"
         Title="MainWindow"  Width="1920" Height="1080" WindowState="Maximized" WindowStyle="SingleBorderWindow">
     <Window.Resources>
@@ -105,8 +105,8 @@
                                             <TextBlock>
                                                 <TextBlock.Text>
                                                     <MultiBinding StringFormat="{}{0} {1}">
-                                                        <Binding Path="first_name"/>
-                                                        <Binding Path="last_name"/>
+                                                        <Binding Path="FirstName"/>
+                                                        <Binding Path="LastName"/>
                                                     </MultiBinding>
                                                 </TextBlock.Text>
                                             </TextBlock>
@@ -118,21 +118,44 @@
                         <Rectangle x:Name="playerMenuBorder" HorizontalAlignment="Left" Height="840" Margin="484,125,0,0" Stroke="Black" VerticalAlignment="Top" Width="1390" Fill="Gray"/>
                         <Grid x:Name="selectedPlayerInfoGrid" Margin="508,146,66,60" Background="White">
                             <Label x:Name="positionLabel" Content="POSITION:" HorizontalAlignment="Left" Margin="50,433,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="36"/>
-                            <Label x:Name="firstNameLabel" Content="{Binding SelectedPlayerVM.first_name, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="325,134,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Normal" FontSize="72"/>
-                            <Label x:Name="lastNameLabel" Content="{Binding SelectedPlayerVM.last_name, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="325,217,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="72"/>
-                            <Label x:Name="playerTeamLabel" Content="TeamName" HorizontalAlignment="Left" Margin="265,375,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Normal" FontSize="36"/>
-                            <Label x:Name="playerPositionLabel" Content="{Binding SelectedPlayerVM.position, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="265,433,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Normal" FontSize="36"/>
+                            <Label x:Name="firstNameLabel" Content="{Binding SelectedPlayerVM.FirstName}" HorizontalAlignment="Left" Margin="325,134,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Normal" FontSize="72"/>
+                            <Label x:Name="lastNameLabel" Content="{Binding SelectedPlayerVM.LastName}" HorizontalAlignment="Left" Margin="325,217,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="72"/>
+                            <Label x:Name="playerTeamLabel" Content="{Binding SelectedPlayerVM.Team.Name}" HorizontalAlignment="Left" Margin="300,375,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Normal" FontSize="36"/>
+                            <Label x:Name="playerPositionLabel" Content="{Binding SelectedPlayerVM.Position}" HorizontalAlignment="Left" Margin="300,433,0,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Normal" FontSize="36"/>
                             <Image x:Name="playerHeadshot" Source="/Images/Headshots/headshot-placeholder.png" HorizontalAlignment="Left" Height="250" Margin="50,50,0,0" VerticalAlignment="Top" Width="250"/>
                             <Label x:Name="teamLabel" Content="TEAM:" HorizontalAlignment="Left" Margin="50,375,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
-                            <Image x:Name="teamLogo" Source="/Images/Teams/SeirinLogo.png" HorizontalAlignment="Left" Height="250" Margin="1050,50,0,0" VerticalAlignment="Top" Width="250"/>
-                            <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,350,0,0" Stroke="Black" VerticalAlignment="Top" Width="1322"/>
-                            <Label x:Name="weightLabel" Content="WEIGHT:" HorizontalAlignment="Left" Margin="50,563,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36"/>
+                            <Image x:Name="teamLogo" Source="{Binding SelectedPlayerVM.TeamImagePath}" HorizontalAlignment="Left" Height="250" Margin="1050,50,0,0" VerticalAlignment="Top" Width="250"/>
+                            <Rectangle HorizontalAlignment="Center" Height="2" Margin="0,350,0,0" Stroke="Black" VerticalAlignment="Top" Width="1322"/>
+                            <Label x:Name="weightLabel" Content="WEIGHT (lbs):" HorizontalAlignment="Left" Margin="50,563,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36"/>
                             <Label x:Name="heightLabel" Content="HEIGHT:" HorizontalAlignment="Left" Margin="50,496,0,0" VerticalAlignment="Top" FontSize="36"/>
-                            <Label x:Name="playerheightFeetLabel" Content="{Binding SelectedPlayerVM.height_feet, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="265,496,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Normal"
+                            <Label x:Name="playerheightFeetLabel" Content="{Binding SelectedPlayerVM.HeightFeet}" HorizontalAlignment="Left" Margin="290,496,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Normal"
                                    ContentStringFormat=" {0}'"/>
-                            <Label x:Name="playerheightInchesLabel" Content="{Binding SelectedPlayerVM.height_inches, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="300,496,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Normal"/>
-                            <Label x:Name="playerWeightLabel" Content="{Binding SelectedPlayerVM.weight_pounds, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="265,563,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Normal"/>
-                            <Label Content="lbs" HorizontalAlignment="Left" Margin="330,563,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Normal"/>
+                            <Label x:Name="playerheightInchesLabel" Content="{Binding SelectedPlayerVM.HeightInches}" HorizontalAlignment="Left" Margin="330,496,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Normal"/>
+                            <Label x:Name="playerWeightLabel" Content="{Binding SelectedPlayerVM.WeightPounds}" HorizontalAlignment="Left" Margin="300,563,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Normal"/>
+                            <Rectangle HorizontalAlignment="Left" Height="433" Margin="535,356,0,0" Stroke="Black" VerticalAlignment="Top" Width="2"/>
+                        </Grid>
+                        <Grid Margin="1052,503,66,60">
+                            <Label x:Name="seasonStatsHeader" Content="Season Stats AVG" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" BorderBrush="Black" BorderThickness="2,2,2,2"/>
+                            <Label x:Name="gamesPlayedLabel" Content="GP" HorizontalAlignment="Left" Margin="12,100,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" BorderThickness="0,0,2,0" BorderBrush="Black" Width="75" HorizontalContentAlignment="Center"/>
+                            <Label x:Name="minutesLabel" Content="MIN" HorizontalAlignment="Left" Margin="87,100,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,2,0" Width="75" HorizontalContentAlignment="Center"/>
+                            <Label x:Name="pointsLabel" Content="PTS" HorizontalAlignment="Left" Margin="162,100,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,2,0" Width="75" HorizontalContentAlignment="Center"/>
+                            <Label x:Name="assitsLabel" Content="AST" HorizontalAlignment="Left" Margin="237,100,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,2,0" Width="75" HorizontalContentAlignment="Center"/>
+                            <Label x:Name="reboundsLabel" Content="REB" HorizontalAlignment="Left" Margin="312,100,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,2,0" Width="75" HorizontalContentAlignment="Center"/>
+                            <Label x:Name="blocksLabel" Content="BLK" HorizontalAlignment="Left" Margin="387,100,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,2,0" Width="75" HorizontalContentAlignment="Center"/>
+                            <Label x:Name="fieldgoalLabel" Content="FG%" HorizontalAlignment="Left" Margin="462,100,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,2,0" Width="75" HorizontalContentAlignment="Center"/>
+                            <Label x:Name="threepointLabel" Content="3P%" HorizontalAlignment="Left" Margin="537,100,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" BorderBrush="Black" BorderThickness="0,0,2,0" Width="75" HorizontalContentAlignment="Center"/>
+                            <Label x:Name="freethowLabel" Content="FT%" HorizontalAlignment="Left" Margin="612,100,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" BorderThickness="0,0,2,0" Width="75" HorizontalContentAlignment="Center"/>
+                            <Label x:Name="seasonLabel" Content="Season: 2018-19" HorizontalAlignment="Left" Margin="339,25,0,0" VerticalAlignment="Top" FontSize="24"/>
+                            <Label x:Name="playerGamesPlayedLabel" Content="1" HorizontalAlignment="Left" Margin="12,147,0,0" VerticalAlignment="Top" FontSize="24" BorderThickness="0,0,2,0" FontWeight="Normal" Width="75" HorizontalContentAlignment="Center" BorderBrush="Black"/>
+                            <Label x:Name="playerMinutesLabel" Content="24" HorizontalAlignment="Left" Margin="87,147,0,0" VerticalAlignment="Top" FontSize="24" BorderThickness="0,0,2,0" FontWeight="Normal" Width="75" HorizontalContentAlignment="Center" BorderBrush="Black"/>
+                            <Label x:Name="playerPointsLabel" Content="1" HorizontalAlignment="Left" Margin="162,147,0,0" VerticalAlignment="Top" FontSize="24" BorderThickness="0,0,2,0" FontWeight="Normal" Width="75" HorizontalContentAlignment="Center" BorderBrush="Black"/>
+                            <Label x:Name="playerAssitsLabel" Content="1" HorizontalAlignment="Left" Margin="312,147,0,0" VerticalAlignment="Top" FontSize="24" BorderThickness="0,0,2,0" FontWeight="Normal" Width="75" HorizontalContentAlignment="Center" BorderBrush="Black"/>
+                            <Label x:Name="playerReboundsLabel" Content="1" HorizontalAlignment="Left" Margin="237,147,0,0" VerticalAlignment="Top" FontSize="24" BorderThickness="0,0,2,0" FontWeight="Normal" Width="75" HorizontalContentAlignment="Center" BorderBrush="Black"/>
+                            <Label x:Name="playerBlocksLabel" Content="1" HorizontalAlignment="Left" Margin="387,147,0,0" VerticalAlignment="Top" FontSize="24" BorderThickness="0,0,2,0" FontWeight="Normal" Width="75" HorizontalContentAlignment="Center" BorderBrush="Black"/>
+                            <Label x:Name="playerFGLabel" Content="43.2" HorizontalAlignment="Left" Margin="462,147,0,0" VerticalAlignment="Top" FontSize="24" BorderThickness="0,0,2,0" FontWeight="Normal" Width="75" HorizontalContentAlignment="Center" BorderBrush="Black"/>
+                            <Label x:Name="player3PLabel" Content="37.8" HorizontalAlignment="Left" Margin="537,147,0,0" VerticalAlignment="Top" FontSize="24" BorderThickness="0,0,2,0" FontWeight="Normal" Width="75" HorizontalContentAlignment="Center" BorderBrush="Black"/>
+                            <Label x:Name="playerFTLabel" Content="83.5" HorizontalAlignment="Left" Margin="612,147,0,0" VerticalAlignment="Top" FontSize="24" BorderThickness="0,0,2,0" FontWeight="Normal" Width="75" HorizontalContentAlignment="Center"/>
+
                         </Grid>
                     </Grid>
                 </TabItem>

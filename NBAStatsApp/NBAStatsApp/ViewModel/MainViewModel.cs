@@ -31,6 +31,7 @@ namespace NBAStatsApp.ViewModel
         public MainViewModel()
         {
             playerRepo.PlayerAPI();
+            //playerRepo.TestAPI();
             foreach (Player player in playerRepo.GetAll())
             {
                 PlayerViewModel playerVM = new(player);
